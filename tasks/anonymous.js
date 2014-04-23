@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       grunt.log.write("Creating File ".magenta + "'".blue + f.dest.cyan + "'...".blue);
       
       // Handle options.
-      var res = 'function(';
+      var res = '(function(';
       for (var i = 0, len = options.params ? options.params.length : 0, first = true; i < len; i++) {
         res += (first ? '' : ',') + options.params[i][1];
         first = false;
