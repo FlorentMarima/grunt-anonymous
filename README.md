@@ -27,13 +27,15 @@ In your project's Gruntfile, add a section named `anonymous` to the data object 
 ```js
 grunt.initConfig({
   anonymous: {
-    options: {
-      // Task-specific options go here.
-    },
-    files: {
-      // Target-specific file lists and/or options go here.
+    dist : {
+      options: {
+        // Task-specific options go here.
+      },
+      files: {
+        // Target-specific file lists and/or options go here.
+      }
     }
-  },
+  }
 });
 ```
 
@@ -63,11 +65,13 @@ In this example, if the `a.js` file has the content `Some` and the `b.js` file h
 ```js
 grunt.initConfig({
   anonymous: {
-    options: {},
-    files: {
-      'dest/res.js': ['a.js', 'b.js'],
-    },
-  },
+    dist: {
+      options: {},
+      files: {
+        'dest/res.js': ['a.js', 'b.js'],
+      },
+    }
+  }
 });
 ```
 
@@ -77,6 +81,7 @@ Now let's suppose you need some parameter. Considering the same files  as above,
 ```js
 grunt.initConfig({
   anonymous: {
+   dist: {
     options: {
      params : [
         ['window', 'w'],
@@ -85,8 +90,9 @@ grunt.initConfig({
     },
     files: {
       'dest/res.js': ['a.js', 'b.js'],
-    },
-  },
+    }
+   }
+  }
 });
 ```
 
