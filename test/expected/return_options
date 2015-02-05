@@ -1,0 +1,1 @@
+var foobar = (function(){var foo = "foo";var bar = "bar";return foo + bar;})();
