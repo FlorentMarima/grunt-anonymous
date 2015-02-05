@@ -48,6 +48,14 @@ module.exports = function(grunt) {
           'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
         },
       },
+      return_options: {
+        options: {
+          'return' : "foobar"
+        },
+        files: {
+          'tmp/return_options': ['test/fixtures/return_a', 'test/fixtures/return_b', 'test/fixtures/return_c'],
+        },
+      },
     },
 
     // Unit tests.

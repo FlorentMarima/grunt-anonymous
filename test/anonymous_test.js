@@ -45,4 +45,13 @@ exports.anonymous = {
 
     test.done();
   },
+  return_options: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/return_options');
+    var expected = grunt.file.read('test/expected/return_options');
+    test.equal(actual, expected, 'return params');
+
+    test.done();
+  },
 };
